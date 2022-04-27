@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 def main():
-    dados = pd.read_table('questao1.txt')
+    dados = pd.read_csv('questao1.txt',sep='\t')
     corrente_diodo = dados['I(D1)']
     tensao_diodo = dados['v1']
     #Fatiar o vetores de forma a pegar apenas o ultimo oitavo com a função array_split.
