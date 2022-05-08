@@ -27,6 +27,7 @@ def main():
     plt.ylabel('Corrente(A)')
     plt.legend()
     plt.savefig('output1.png')
+    plt.show()
 
     #Fatiar o vetores de forma a pegar apenas o ultimo oitavo com a função array_split.
     #Detalhe: Em python os índices dos vetores começam em zero. Por isso, o índice 7 foi escolhido para pegar o ultimo oitavo.
@@ -52,6 +53,7 @@ def main():
     plt.ylabel('Corrente(A)')
     plt.legend()
     plt.savefig('output2.png')
+    plt.show()
 
 if __name__ == "__main__":
     main()
