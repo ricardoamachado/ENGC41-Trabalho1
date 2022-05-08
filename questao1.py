@@ -26,7 +26,7 @@ def main():
     plt.xlabel('Tensão(V)')
     plt.ylabel('Corrente(A)')
     plt.legend()
-    plt.savefig('output1.png')
+    plt.savefig('output1.png',dpi=200)
     plt.show()
 
     #Fatiar o vetores de forma a pegar apenas o ultimo oitavo com a função array_split.
@@ -52,7 +52,7 @@ def main():
     plt.xlabel('Tensão(V)')
     plt.ylabel('Corrente(A)')
     plt.legend()
-    plt.savefig('output2.png')
+    plt.savefig('output2.png',dpi=200)
     plt.show()
 
 if __name__ == "__main__":
