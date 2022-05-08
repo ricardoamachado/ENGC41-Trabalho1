@@ -21,8 +21,11 @@ def main():
 
     #Plot comparando a caracteristica simulada com o modelo exponencial.
     plt.figure(1)
-    plt.plot(tensao_diodo,corrente_diodo_exp)
-    plt.plot(tensao_diodo,corrente_diodo)
+    plt.plot(tensao_diodo,corrente_diodo_exp,label='Curva Ajustada')
+    plt.plot(tensao_diodo,corrente_diodo,label='Curva Simulada')
+    plt.xlabel('Tensão(V)')
+    plt.ylabel('Corrente(A)')
+    plt.legend()
     plt.savefig('output1.png')
 
     #Fatiar o vetores de forma a pegar apenas o ultimo oitavo com a função array_split.
@@ -41,12 +44,14 @@ def main():
     #Print dos valores de rd e Vd0
     print(f"Para o modelo linearizado, temos que rd:{rd:.3f} Ohm e Vd0:{Vd0:.3f} V.")
 
-    #Plot preliminar. MUDAR DESCRIÇÃO DEPOIS
+    #Plot comparando a caracteristica simulada com o modelo linearizado
     plt.figure(2)
-    plt.plot(tensao_diodo_oitavo,corrente_diodo_linear)
-    plt.plot(tensao_diodo,corrente_diodo)
+    plt.plot(tensao_diodo_oitavo,corrente_diodo_linear,label='Curva Linearizada')
+    plt.plot(tensao_diodo,corrente_diodo,label='Curva Simulada')
+    plt.xlabel('Tensão(V)')
+    plt.ylabel('Corrente(A)')
+    plt.legend()
     plt.savefig('output2.png')
-    plt.show()
 
 if __name__ == "__main__":
     main()
