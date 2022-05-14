@@ -17,7 +17,7 @@ def main():
     corrente_diodo_exp = Is*np.exp(tensao_diodo/(0.026*eta))
 
     #Print dos valores de eta e Is
-    print(f"Para o modelo exponencial, temos que eta:{eta:.3f} V e Is:{Is*10**9:.3f} nV.")
+    print(f"Para o modelo exponencial, temos que eta:{eta:.3f} e Is:{Is*10**9:.3f} nV.")
 
     #Plot comparando a caracteristica simulada com o modelo exponencial.
     plt.figure(1)
